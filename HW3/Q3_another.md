@@ -50,19 +50,17 @@ histogram(pIN_dBm, edges, 'Normalization','probability')
 xlabel('P_{in} (dBm)')
 ylabel('Probability')
 title('Probability Distribution of P_{in}')
-
 edges = [13:0.2:35];
 figure()
 histogram(pL_dBm, edges, 'Normalization','probability')
 xlabel('P_{L} (dBm)')
 ylabel('Probability')
 title('Probability Distribution of P_{L}')
-
 % instantaneous PA gain
 gain = pL_dBm - pIN_dBm;
 % average PA gain
 gain_avg = pL_avg_dBm - pIN_avg_dBm;
-% plot
+% plot gain
 figure()
 plot(pIN_dBm, gain, '-ro')
 hold on
@@ -72,4 +70,10 @@ xlabel('P_{IN} (dBm)')
 ylabel('Gain (dB)')
 title('PA Gain vs Input Power and Average Gain')
 legend('PA Gain vs Input Power', 'Average Gain')
+% plot phase distortion
+figure()
+plot(abs(vIN_bb), rad2deg(angle(vL_bb./vIN_bb)))
+xlabel('v_{IN} (mag)')
+ylabel('phase distortion (deg)')
+title('AM-PM')
 ```
