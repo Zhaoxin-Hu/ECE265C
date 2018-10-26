@@ -1,3 +1,4 @@
+```matlab
 clc
 clf
 close all
@@ -71,3 +72,4 @@ xlabel('P_{IN} (dBm)')
 ylabel('Gain (dB)')
 title('PA Gain vs Input Power and Average Gain')
 legend('PA Gain vs Input Power', 'Average Gain')
+```
