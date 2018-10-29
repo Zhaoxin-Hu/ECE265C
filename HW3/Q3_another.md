@@ -4,9 +4,10 @@ clf
 close all
 
 load('HW3_waveforms')
-t = t(1:1000);
-vIN = vIN(1:1000);
-vL = vL(1:1000);
+% t = t(1:1000);
+% vIN = vIN(1:1000);
+% vL = vL(1:1000);
+len = length(t);
 omega_IF = 2*pi*103.68e6;
 % analytic signals
 vINa = hilbert(vIN);
@@ -38,11 +39,11 @@ pL_avg_dBm = 30+pow2db(pL_avg);
 disp(['P_IN_avg = ', num2str(pIN_avg_dBm)])
 disp(['P_L_avg = ', num2str(pL_avg_dBm)])
 % version 2: average the dBm power
-disp('averager power version 2')
-pIN_dBm_avg = mean(pIN_dBm);
-pL_dBm_avg = mean(pL_dBm);
-disp(['P_IN_avg = ', num2str(pIN_dBm_avg)])
-disp(['P_L_avg = ', num2str(pL_dBm_avg)])
+% disp('averager power version 2')
+% pIN_dBm_avg = mean(pIN_dBm);
+% pL_dBm_avg = mean(pL_dBm);
+% disp(['P_IN_avg = ', num2str(pIN_dBm_avg)])
+% disp(['P_L_avg = ', num2str(pL_dBm_avg)])
 % estimated pdf
 edges = [-14:0.2:4];
 figure()
@@ -64,7 +65,7 @@ gain_avg = pL_avg_dBm - pIN_avg_dBm;
 figure()
 plot(pIN_dBm, gain, '-ro')
 hold on
-plot(pIN_dBm, gain_avg*ones(1000), 'k')
+plot(pIN_dBm, gain_avg*ones(len,1), 'k')
 hold off
 xlabel('P_{IN} (dBm)')
 ylabel('Gain (dB)')
