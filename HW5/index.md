@@ -1,5 +1,3 @@
 # Plots
-![P_IN](https://zhaoxin-hu.github.io/ECE265C/HW3/Latest/pin.jpg)<br/>
-![P_L](https://zhaoxin-hu.github.io/ECE265C/HW3/Latest/pl.jpg)<br/>
-![Gain Plots](https://zhaoxin-hu.github.io/ECE265C/HW3/Latest/avg%20gain.jpg)<br/>
-![AM PM](https://zhaoxin-hu.github.io/ECE265C/HW3/Latest/am-pm.jpg)
+![Q3_2](https://zhaoxin-hu.github.io/ECE265C/HW5/Q3_2.png)<br/>
+![Q3_4](https://zhaoxin-hu.github.io/ECE265C/HW5/Q3_4.png)<br/>
